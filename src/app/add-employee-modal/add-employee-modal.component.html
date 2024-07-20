@@ -1,0 +1,45 @@
+<div class="modal" tabindex="-1" role="dialog" style="display: block;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Employee</h5>
+          <button type="button" class="close" aria-label="Close" (click)="onCloseModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form #addEmployeeForm="ngForm" (ngSubmit)="onAddEmployee(addEmployeeForm)">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" [(ngModel)]="newEmployee.name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" [(ngModel)]="newEmployee.email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="jobTitle">Job Title</label>
+              <input type="text" id="jobTitle" class="form-control" [(ngModel)]="newEmployee.jobTitle" name="jobTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" class="form-control" [(ngModel)]="newEmployee.phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="imageUrl">Image URL</label>
+              <input type="text" id="imageUrl" class="form-control" [(ngModel)]="newEmployee.imageUrl" name="imageUrl">
+            </div>
+            <div class="form-group">
+              <label for="employeeCode">Employee Code</label>
+              <input type="text" id="employeeCode" class="form-control" [(ngModel)]="newEmployee.employeeCode" name="employeeCode" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Employee</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="onCloseModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

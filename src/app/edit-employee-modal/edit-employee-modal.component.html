@@ -1,0 +1,42 @@
+<!-- edit-employee-modal.component.html -->
+<div class="modal show d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Employee</h5>
+          <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" [(ngModel)]="editedEmployee.name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" [(ngModel)]="editedEmployee.email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="jobTitle">Job Title</label>
+              <input type="text" id="jobTitle" class="form-control" [(ngModel)]="editedEmployee.jobTitle" name="jobTitle">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" class="form-control" [(ngModel)]="editedEmployee.phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="imageUrl">Image URL</label>
+              <input type="text" id="imageUrl" class="form-control" [(ngModel)]="editedEmployee.imageUrl" name="imageUrl">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="saveChanges()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
