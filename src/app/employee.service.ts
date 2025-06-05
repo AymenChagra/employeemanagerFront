@@ -8,7 +8,10 @@ import { environment } from '../environments/environment';
   providedIn: 'root'
 })
 export class EmployeeService {
+  /*to run on web*/
+  //private apiServerUrl = 'http://localhost/api';  // Note the '/api' to match Nginx configuration
 
+  //to run locally */
   private apiServerUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
